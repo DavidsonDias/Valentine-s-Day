@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <!-- Metadados essenciais -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Uma homenagem cheia de amor, pelos e carinho para a melhor mãe do mundo feita por Estrela, Toddy, Simba, Léo e o papai Davidson." />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="SevenDevX - Davidson Dias" />
+
+  <!-- Open Graph (para redes sociais) -->
+  <meta property="og:title" content="Feliz Dia das Mães!" />
+  <meta property="og:description" content="Uma homenagem cheia de amor, pelos e carinho feita por Estrela, Toddy, Simba, Léo (e o papai)." />
+  <meta property="og:image" content="https://mae-swart.vercel.app/assets/img/foto-mamae-e-pets.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://mae-swart.vercel.app/" />
+  <meta property="og:site_name" content="SevenDevX - Homenagem do Dia das Mães" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Feliz Dia das Mães!" />
+  <meta name="twitter:description" content="Uma homenagem cheia de amor, pelos e carinho feita por Estrela, Toddy, Simba, Léo (e o papai)." />
+  <meta name="twitter:image" content="https://mae-swart.vercel.app/assets/img/foto-mamae-e-pets.jpg" />
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://mae-swart.vercel.app/" />
+
+  <!-- Favicon e manifest -->
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="assets/manifest.json" />
+  <meta name="theme-color" content="#ff6b81" />
+
+  <!-- Título da página -->
+  <title>Para o Amor da Minha Vida</title>
+
+  <!-- Pré-conexão para fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Fontes personalizadas -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Caveat&display=swap" rel="stylesheet" />
+
+  <!-- Estilos e scripts -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script defer src="assets/js/script.js"></script>
+  <script defer src="assets/js/background-stars.js"></script>
+</head>
+<body>
+  <div id="welcome-screen">
+    <div class="welcome-content">
+      <h1>Bem-vinda, Meu Amor!</h1>
+      <p>Preparamos algo especial para você.</p>
+      <button id="enter-site">Entrar</button>
+    </div>
+  </div>
+
+  <canvas id="stars"></canvas>
+  <div class="hearts"></div>
+  <button id="toggle-music">Tocar Música <span class="music-icon">♪</span></button>
+  <audio id="bg-music" src="assets/music/music.mp3" autoplay loop></audio>
+
+  <header class="hero">
+    <img src="assets/img/background.jpg" alt="Foto de fundo" class="hero-bg" />
+    <div class="hero-content">
+      <h1>Para Você, Meu Amor</h1>
+      <p>Uma homenagem da nossa história e da nossa família de quatro patas<span class="patinha">🐾</span></p>
+    </div>
+  </header>
+
+  <main>
+    <section class="nossa-historia">
+      <h2>Nossa História <span class="patinha">🐾</span></h2>
+      <p>Desde que nos conhecemos, a vida ficou mais leve, mais doce e cheia de amor...<span class="patinha">🐾</span></p>
+    </section>
+
+    <section class="carta-love">
+      <h2>Carta para a Melhor Namorada do Mundo<br>(com patinhas<span class="patinha">🐾</span> <br />e muito amor<span class="coracao">❤️</span>)</h2>
+      <p id="cartaTexto"></p>
+<p id="assinatura" style="font-family: 'Caveat', cursive; font-size: 1.5em; color: #ff6b81; text-align: right; margin-top: 30px;"></p>
+
+  </main>
+
+  <footer>
+    <p>Para sempre nós. A Thousand Years. <span class="patinha">🐾</span></p>
+  </footer>
+</body>
+</html>

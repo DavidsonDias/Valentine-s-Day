@@ -1,0 +1,269 @@
+/* -------------------------------------
+   FONTES ROMÂNTICAS
+------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+/* -------------------------------------
+   ESTILOS GERAIS
+------------------------------------- */
+body {
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  background: #1b1b1b;
+  color: #fff;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+h1, h2 {
+  font-family: 'Dancing Script', cursive;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+  animation: fadeInTitle 1s ease-out forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+p {
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+/* Animação de entrada de títulos */
+@keyframes fadeInTitle {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+section, header, footer {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+/* -------------------------------------
+   TELA DE BOAS-VINDAS
+------------------------------------- */
+#welcome-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000 url('../img/background7.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 1000;
+  color: white;
+}
+
+.welcome-content {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 105, 180, 0.4);
+}
+
+#welcome-screen button {
+  margin-top: 20px;
+  padding: 10px 30px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 8px;
+  background-color: #ff3366;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#welcome-screen button:hover {
+  background-color: #ff0055;
+}
+
+/* -------------------------------------
+   HERO (TOPO ROMÂNTICO)
+------------------------------------- */
+.hero {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  color: white;
+  z-index: -1000;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.4);
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  padding: 120px 20px;
+}
+
+/* -------------------------------------
+   HISTÓRIA DO CASAL
+------------------------------------- */
+.nossa-historia {
+  border-top: 2px solid #ff5ca2;
+  border-bottom: 2px solid #ff5ca2;
+}
+
+/* -------------------------------------
+   CARTA PARA A NAMORADA (AJUSTADA COMO CARTA DE AMOR)
+------------------------------------- */
+.carta-mae p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+  white-space: pre-line;
+  font-family: 'Courier New', monospace;
+}
+
+#cartaTexto::after {
+  content: '|';
+  animation: piscarCursor 1s infinite;
+  display: inline-block;
+  margin-left: 2px;
+}
+
+@keyframes piscarCursor {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+
+/* -------------------------------------
+   RODAPÉ
+------------------------------------- */
+footer {
+  background-color: #111;
+  padding: 40px 20px;
+  font-size: 1.1em;
+  color: #fddc8f;
+  border-top: 2px solid #ff5ca2;
+}
+
+/* -------------------------------------
+   EFEITOS VISUAIS ROMÂNTICOS
+------------------------------------- */
+#stars {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* Corações flutuantes */
+.hearts {
+  position: fixed;
+  bottom: 0; left: 0;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.heart {
+  position: absolute;
+  bottom: -20px;
+  color: #ff5ca2;
+  font-size: 24px;
+  animation: floatHeart 6s linear infinite;
+}
+
+@keyframes floatHeart {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* -------------------------------------
+   BOTÃO DE MÚSICA
+------------------------------------- */
+#toggle-music {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background: rgba(255, 92, 162, 0.9);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  z-index: 10;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 4px 10px rgba(255, 92, 162, 0.4);
+  transition: background 0.3s ease;
+}
+
+#toggle-music:hover {
+  background: #ff3377;
+}
+
+/* -------------------------------------
+   RESPONSIVIDADE
+------------------------------------- */
+@media (max-width: 600px) {
+  .pet {
+    width: 100%;
+  }
+
+  .pet img {
+    width: 90%;
+  }
+
+  .hero-content {
+    padding: 80px 10px;
+  }
+
+  section, header, footer {
+    padding: 60px 15px;
+  }
+}
+
+/* -------------------------------------
+   ANIMAÇÃO DAS SEÇÕES AO ROLAR
+------------------------------------- */
+section {
+  animation: fadeInSection 1.5s ease-out both;
+}
+
+@keyframes fadeInSection {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+#canvas {
+  position: fixed; /* ou absolute */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none; /* para que o canvas não capture cliques */
+  z-index: -1; /* atrás do conteúdo */
+  display: block;
+}
